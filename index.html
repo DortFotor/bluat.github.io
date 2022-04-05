@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Collab.Land Connect">
+
+    <title>Collab.Land Connect</title>
+    <link href="main.dd3df588.chunk.css" rel="stylesheet">
+    <style data-jss="" data-meta="MuiTypography">
+        .MuiTypography-root {
+            margin: 0;
+        }
+        
+        .MuiTypography-body2 {
+            font-size: 0.875rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.43;
+            letter-spacing: 0.01071em;
+        }
+        
+        .MuiTypography-body1 {
+            font-size: 1rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: 0.00938em;
+        }
+        
+        .MuiTypography-caption {
+            font-size: 0.75rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.66;
+            letter-spacing: 0.03333em;
+        }
+        
+        .MuiTypography-button {
+            font-size: 0.875rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 1.75;
+            letter-spacing: 0.02857em;
+            text-transform: uppercase;
+        }
+        
+        .MuiTypography-h1 {
+            font-size: 6rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1.167;
+            letter-spacing: -0.01562em;
+        }
+        
+        .MuiTypography-h2 {
+            font-size: 3.75rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.00833em;
+        }
+        
+        .MuiTypography-h3 {
+            font-size: 3rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.167;
+            letter-spacing: 0em;
+        }
+        
+        .MuiTypography-h4 {
+            font-size: 2.125rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.235;
+            letter-spacing: 0.00735em;
+        }
+        
+        .MuiTypography-h5 {
+            font-size: 1.5rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.334;
+            letter-spacing: 0em;
+        }
+        
+        .MuiTypography-h6 {
+            font-size: 1.25rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+            letter-spacing: 0.0075em;
+        }
+        
+        .MuiTypography-subtitle1 {
+            font-size: 1rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.75;
+            letter-spacing: 0.00938em;
+        }
+        
+        .MuiTypography-subtitle2 {
+            font-size: 0.875rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 500;
+            line-height: 1.57;
+            letter-spacing: 0.00714em;
+        }
+        
+        .MuiTypography-overline {
+            font-size: 0.75rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 2.66;
+            letter-spacing: 0.08333em;
+            text-transform: uppercase;
+        }
+        
+        .MuiTypography-srOnly {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+        }
+        
+        .MuiTypography-alignLeft {
+            text-align: left;
+        }
+        
+        .MuiTypography-alignCenter {
+            text-align: center;
+        }
+        
+        .MuiTypography-alignRight {
+            text-align: right;
+        }
+        
+        .MuiTypography-alignJustify {
+            text-align: justify;
+        }
+        
+        .MuiTypography-noWrap {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .MuiTypography-gutterBottom {
+            margin-bottom: 0.35em;
+        }
+        
+        .MuiTypography-paragraph {
+            margin-bottom: 16px;
+        }
+        
+        .MuiTypography-colorInherit {
+            color: inherit;
+        }
+        
+        .MuiTypography-colorPrimary {
+            color: #3f51b5;
+        }
+        
+        .MuiTypography-colorSecondary {
+            color: #f50057;
+        }
+        
+        .MuiTypography-colorTextPrimary {
+            color: rgba(0, 0, 0, 0.87);
+        }
+        
+        .MuiTypography-colorTextSecondary {
+            color: rgba(0, 0, 0, 0.54);
+        }
+        
+        .MuiTypography-colorError {
+            color: #f44336;
+        }
+        
+        .MuiTypography-displayInline {
+            display: inline;
+        }
+        
+        .MuiTypography-displayBlock {
+            display: block;
+        }
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+        .jss6 {
+            width: 3rem;
+            height: 3rem;
+        }
+        
+        .jss7 {
+            margin: .3rem;
+            font-weight: bold;
+        }
+    </style>
+    <style data-jss="" data-meta="MuiSnackbar">
+        .MuiSnackbar-root {
+            left: 8px;
+            right: 8px;
+            display: flex;
+            z-index: 1400;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .MuiSnackbar-anchorOriginTopCenter {
+            top: 8px;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginTopCenter {
+                top: 24px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+            }
+        }
+        
+        .MuiSnackbar-anchorOriginBottomCenter {
+            bottom: 8px;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginBottomCenter {
+                left: 50%;
+                right: auto;
+                bottom: 24px;
+                transform: translateX(-50%);
+            }
+        }
+        
+        .MuiSnackbar-anchorOriginTopRight {
+            top: 8px;
+            justify-content: flex-end;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginTopRight {
+                top: 24px;
+                left: auto;
+                right: 24px;
+            }
+        }
+        
+        .MuiSnackbar-anchorOriginBottomRight {
+            bottom: 8px;
+            justify-content: flex-end;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginBottomRight {
+                left: auto;
+                right: 24px;
+                bottom: 24px;
+            }
+        }
+        
+        .MuiSnackbar-anchorOriginTopLeft {
+            top: 8px;
+            justify-content: flex-start;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginTopLeft {
+                top: 24px;
+                left: 24px;
+                right: auto;
+            }
+        }
+        
+        .MuiSnackbar-anchorOriginBottomLeft {
+            bottom: 8px;
+            justify-content: flex-start;
+        }
+        
+        @media (min-width:600px) {
+            .MuiSnackbar-anchorOriginBottomLeft {
+                left: 24px;
+                right: auto;
+                bottom: 24px;
+            }
+        }
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+        .jss5 {
+            width: 100%;
+        }
+        
+        .jss5>*+* {
+            margin-top: 16px;
+        }
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+        .jss1 {
+            padding: 2rem 6rem;
+            flex-grow: 1;
+        }
+        
+        @media (max-width:719.95px) {
+            .jss1 {
+                padding: 2rem 3rem;
+            }
+        }
+        
+        .jss2 {
+            top: 50%;
+            position: absolute;
+            text-align: center;
+        }
+        
+        .jss3 {
+            border: 2px solid #d7d3d3;
+            margin: 2em;
+            padding: 10px;
+            overflow: scroll;
+            margin-top: 5em;
+        }
+        
+        .jss4 {
+            width: 100%;
+            padding: 0rem 3rem;
+            margin-top: 75px;
+            text-align: center;
+        }
+    </style>
+    <style type="text/css" id="BitskiEmbeddedStyles">
+        #bitski-dialog-container {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            transition: background linear 0.2s;
+            pointer-events: none;
+        }
+        
+        #bitski-dialog-container.bitski-visible {
+            background: rgba(0, 0, 0, 0.5);
+            pointer-events: auto;
+        }
+        
+        .bitski-dialog {
+            opacity: 0;
+            transform: translateY(100vh);
+            transition: opacity 300ms linear, transform 400ms cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #bitski-dialog-container.bitski-visible .bitski-dialog {
+            opacity: 1;
+            transform: none;
+            transition: opacity 300ms linear, transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+            pointer-events: auto;
+        }
+        
+        .bitski-dialog .bitski-close-button {
+            background: transparent url("") no-repeat 50% 50%;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            border: none;
+            outline: none;
+            margin: 0;
+            cursor: pointer;
+            padding: 0;
+            width: 28px;
+            height: 28px;
+            z-index: 100;
+            overflow: hidden;
+            text-indent: -1000px;
+        }
+        
+        .bitski-dialog-body {
+            background: #fff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            max-width: 100%;
+        }
+        
+        .bitski-dialog-body.bitski-loading::after {
+            content: "";
+            background: url("") no-repeat 50% 50%;
+            animation: rotate 600ms linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.3;
+            width: 38px;
+            height: 38px;
+            margin-left: -19px;
+            margin-top: -19px;
+            z-index: -1;
+        }
+        
+        @media (min-width: 600px) {
+            #bitski-dialog-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .bitski-dialog {
+                position: relative;
+                width: 400px;
+                height: 420px;
+            }
+            .bitski-dialog-body {
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 10px 50px rgba(0, 0, 0, 0.4);
+            }
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .bitski-connect-button {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+            background-color: #1C11D9;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            border: none;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            text-shadow: 1px 0 1px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
+            transition: background 200ms linear, transform 200ms ease-out;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .bitski-connect-button:focus,
+        .bitski-connect-button:active {
+            background-color: #2117C7;
+            transform: scale(0.99, 0.99);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .bitski-connect-button.size-small {
+            background-image: url("");
+            border-radius: 3px;
+            font-size: 10px;
+            height: 22px;
+            line-height: 19px;
+            padding-left: 30px;
+            padding-right: 8px;
+        }
+        
+        .bitski-connect-button.size-medium {
+            background-image: url("");
+            border-radius: 4px;
+            font-size: 11px;
+            height: 30px;
+            line-height: 29px;
+            padding-left: 40px;
+            padding-right: 12px;
+        }
+        
+        .bitski-connect-button.size-large {
+            background-image: url("");
+            border-radius: 5px;
+            font-size: 14px;
+            height: 44px;
+            line-height: 44px;
+            padding-left: 57px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+
+<body style="background-color:#22252d;min-height:100vh"><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" style="min-height:100vh">
+        <div class="h-screen collabland-font">
+            <div class="block h-full ">
+                <div class="h-full block">
+                    <div class="jss5"></div>
+                    <div class="bg-primary w-full text-white text-center py-1">Always verify the website address is https://connect.collab.land</div>
+                    <div class="bg-cl-gray-400 xl:py-4">
+                        <nav position="fixed" class="bg-secondary xl:rounded-full xl:mx-10 xl:py-3 xl:px-3 lg:py-2 py-1">
+                            <div class="flex flex-row items-center sm:m-3 m-2"><img src="CollabLand_Logo.8f56a513.png" alt="Collab.Land" style="width: 227px; height: 42px; margin-right: 8px;"><span class="w-full flex flex-row justify-end items-center"><span class="flex flex-row items-center rounded-2xl bg-cl-gray-200"></span></span>
+                            </div>
+                        </nav>
+                        <style>
+                            .alert-hidden {
+                                opacity: 0;
+                                transition: all 250ms linear 1s; // <- the last value defines transition-delay
+                            }
+                        </style>
+                    </div>
+                    <div class="mx-auto h-5/6" style="max-width: 1400px;">
+                        <div class=" flex flex-col justify-center items-center h-5/6">
+                            <div class="h-5/6 w-full flex flex-col justify-center items-center">
+                                <div class=" w-full grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-8 md:gap-10 gap-3 p-10">
+                                    <div class="" style="cursor: pointer;">
+                                        <div class="bg-white xl:rounded-lg rounded-full flex xl:flex-col flex-row justify-center items-center xl:py-8 md:py-3 py-3 px-5 hover:scale-105 transform duration-150">
+                                            <div class="xl:w-full w-1/4 flex flex-row xl:justify-center"><img src="MetaMask.4f06ed22.png" alt="img" class="lg:h-12 lg:w-12 h-8 w-8"></div>
+                                            <div class="flex flex-row xl:justify-center font-semibold lg:text-2xl md:text-lg text-base xl:w-full w-3/4">MetaMask</div>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle1"> </h6>
+                                        </div>
+                                    </div>
+                                    <div class="" style="cursor: pointer;">
+                                        <div class="bg-white xl:rounded-lg rounded-full flex xl:flex-col flex-row justify-center items-center xl:py-8 md:py-3 py-3 px-5 hover:scale-105 transform duration-150">
+                                            <div class="xl:w-full w-1/4 flex flex-row xl:justify-center"><img src="WalletConnect.5149a5dd.png" alt="img" class="lg:h-12 lg:w-12 h-8 w-8"></div>
+                                            <div class="flex flex-row xl:justify-center font-semibold lg:text-2xl md:text-lg text-base xl:w-full w-3/4">WalletConnect</div>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle1"> </h6>
+                                        </div>
+                                    </div>
+                                    <div class="" style="cursor: pointer;">
+                                        <div class="bg-white xl:rounded-lg rounded-full flex xl:flex-col flex-row justify-center items-center xl:py-8 md:py-3 py-3 px-5 hover:scale-105 transform duration-150">
+                                            <div class="xl:w-full w-1/4 flex flex-row xl:justify-center"><img src="TalismanLogo.4ce704ff.svg" alt="img" class="lg:h-12 lg:w-12 h-8 w-8"></div>
+                                            <div class="flex flex-row xl:justify-center font-semibold lg:text-2xl md:text-lg text-base xl:w-full w-3/4">Talisman</div>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle1"> </h6>
+                                        </div>
+                                    </div>
+                                    <div class="" style="cursor: pointer;">
+                                        <div class="bg-white xl:rounded-lg rounded-full flex xl:flex-col flex-row justify-center items-center xl:py-8 md:py-3 py-3 px-5 hover:scale-105 transform duration-150">
+                                            <div class="xl:w-full w-1/4 flex flex-row xl:justify-center"><img src="coinbasewallet.1c0446a9.svg" alt="img" class="lg:h-12 lg:w-12 h-8 w-8"></div>
+                                            <div class="flex flex-row xl:justify-center font-semibold lg:text-2xl md:text-lg text-base xl:w-full w-3/4">CoinBase</div>
+                                            <h6 class="MuiTypography-root MuiTypography-subtitle1"> </h6>
+                                        </div>
+                                    </div>
+                                </div><a href="all.html" class="rounded-full lg:py-3 py-2 lg:px-20 px-12 text-white border-primary border-2 lg:text-xl md:text-lg text-sm hover:border-cl-yellow-200 duration-200">Show All</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mew-connect-notice-corner">
+        <div id="mew-connect-notice-corner-label-container">
+            <div id="mew-connect-notice-corner-close">
+                <img src="fb31400626445b8e663fe32d37d1fb37e30d9be9.png" height="15" width="11">
+            </div>
+            <img id="mew-connect-notice-corner-img" src="93004f17bd1fcf6f8e4128fea9412633e1b08c96.png">
+            <span id="mew-connect-notice-corner-label-text">MEW&nbsp;wallet</span>
+        </div>
+
+        <div id="mew-connect-notice-corner-text">
+
+        </div>
+    </div>
+    <style type="text/css">
+        /* The snackbar - position it at the bottom and in the middle of the screen */
+        
+        #mew-connect-notice-corner-img {
+            position: relative;
+            top: 10px;
+            left: 5px;
+            width: 23.2px;
+            height: 23.2px;
+        }
+        
+        .hidden {
+            visibility: hidden;
+        }
+        
+        .shown {
+            visibility: visible;
+        }
+        
+        #mew-connect-notice-corner {
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 250px;
+            /* Set a default minimum width */
+            min-height: 110px;
+            /*margin-left: -125px; !* Divide value of min-width by 2 *!*/
+            background-color: white;
+            color: #000000;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            border-radius: 15px;
+            /* Rounded borders */
+            border: rgba(0, 0, 0, 0.1) solid 1px;
+            /*margin: 15px; !* Padding *!*/
+            position: fixed;
+            /* Sit on top of the screen */
+            z-index: 999999999999999;
+            /* Add a z-index if needed */
+            right: 30px;
+            /* Center the snackbar */
+            top: 30px;
+            /* 30px from the bottom */
+            box-shadow: 0px 16px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        #mew-connect-notice-corner-label-text {
+            width: 78px;
+            height: 16px;
+            color: rgb(95, 99, 104);
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.37px;
+            line-height: 14px;
+            padding-top: 15px;
+            padding-left: 12px;
+        }
+        
+        #mew-connect-notice-corner-text {
+            width: 200px;
+            text-align: left;
+            padding: 10px 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            height: 38px;
+            letter-spacing: 0.43px;
+        }
+        
+        .mew-connect-notifier-created-tx-link {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            height: 38px;
+            color: rgb(95, 99, 104);
+        }
+        
+        #mew-connect-notice-corner-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: rgb(95, 99, 104);
+            ;
+            cursor: pointer;
+        }
+        
+        #mew-connect-notice-corner-label-container {
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(95, 99, 104);
+            ;
+            background: rgb(249, 250, 251);
+            /*background: orange;*/
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: left;
+            box-sizing: border-box;
+            /*margin-bottom: 16px;*/
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: left;
+            padding-bottom: 10px;
+        }
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        
+        #mew-connect-notice-corner.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner 0.5s, fadeout-mew-connect-notice-corner 0.5s 3.5s;
+            animation: fadein-mew-connect-notice-corner 0.5s, fadeout-mew-connect-notice-corner 0.5s 3.5s;
+        }
+        
+        #mew-connect-notice-corner.show-persistent {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner 0.5s, fadeout-mew-connect-notice-corner 0.5s 5.5s;
+            animation: fadein-mew-connect-notice-corner 0.5s, fadeout-mew-connect-notice-corner 0.5s 5.5s;
+        }
+        
+        #mew-connect-notice-corner.show-persistent-leave {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadeout-mew-connect-notice-corner 0.5s 1.5s;
+            animation: fadeout-mew-connect-notice-corner 0.5s 1.5s;
+        }
+        
+        #mew-connect-notice-corner.show-in {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner 0.5s;
+            animation: fadein-mew-connect-notice-corner 0.5s;
+        }
+        
+        #mew-connect-notice-corner.show-out {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadeout-mew-connect-notice-corner 0.5s;
+            animation: fadeout-mew-connect-notice-corner 0.5s;
+        }
+        /* Animations to fade the snackbar in and out */
+        
+        @-webkit-keyframes fadein-mew-connect-notice-corner {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadein-mew-connect-notice-corner {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes fadeout-mew-connect-notice-corner {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fadeout-mew-connect-notice-corner {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes WalletLinkNotificationProgressBar {
+            0% {
+                left: 0;
+                width: 0%;
+                background-image: linear-gradient( to right, rgba(22, 82, 240, 0) 0%, rgba(22, 82, 240, 1) 100%);
+            }
+            25% {
+                left: 0;
+                width: 100%;
+            }
+            50% {
+                left: 100%;
+                width: 0%;
+                background-image: linear-gradient( to right, rgba(22, 82, 240, 0) 0%, rgba(22, 82, 240, 1) 100%);
+            }
+            50.01% {
+                background-image: linear-gradient( to left, rgba(22, 82, 240, 0) 0%, rgba(22, 82, 240, 1) 100%);
+            }
+            75% {
+                left: 0;
+                width: 100%;
+            }
+            100% {
+                left: 0;
+                width: 0%;
+                background-image: linear-gradient( to left, rgba(22, 82, 240, 0) 0%, rgba(22, 82, 240, 1) 100%);
+            }
+        }
+    </style>
+    <div id="mew-connect-notice-corner-connected">
+        <img id="mew-connect-notice-corner-connected-img" src="93004f17bd1fcf6f8e4128fea9412633e1b08c96.png">
+        <div id="mew-connect-notice-corner-connected-label-container">
+            <div id="mew-connect-notice-corner-connected-close">
+                <img src="7437762b0ae33eb0f8ff7e602e652f08a34af534.png" height="15" width="11">
+            </div>
+
+            <div class="mew-connect-notice-corner-connected-vertical-flex">
+                <span class="mew-connect-notice-corner-connected-label-text">Connected to</span>
+                <span class="mew-connect-notice-corner-connected-big">MEW&nbsp;wallet</span>
+                <span class="mew-connect-notice-corner-connected-label-text">Powered by MyEtherWallet</span>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        @import url("css2.css");
+        @import url("css2-1.css");
+        /*  ---------------------------------------*/
+        
+        #mew-connect-notice-corner-connected-img {
+            width: 43.5px;
+            height: 43.5px;
+            background-color: white;
+            border-radius: 10px;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            margin-top: 16px;
+            justify-self: center;
+        }
+        
+        .hidden {
+            visibility: hidden;
+        }
+        
+        .shown {
+            visibility: visible;
+        }
+        
+        .mew-connect-notice-corner-connected-big {
+            color: white;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.37px;
+            line-height: 14px;
+            padding-bottom: 4px;
+        }
+        
+        .mew-connect-notice-corner-connected-label-text {
+            color: white;
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.37px;
+            line-height: 12px;
+            padding-bottom: 4px;
+        }
+        
+        .mew-connect-notice-corner-connected-vertical-flex {
+            padding-top: 15px;
+            align-content: start;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start
+        }
+        
+        #mew-connect-notice-corner-connected {
+            display: grid;
+            grid-template-columns: 30% auto;
+            background: rgb(5, 192, 165);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 4px 8px 0px rgba(0, 0, 0, 0.09);
+            visibility: hidden;
+            /* Hidden by default. Visible on click */
+            min-width: 240px;
+            /* Set a default minimum width */
+            min-height: 77px;
+            color: #000000;
+            /* White text color */
+            text-align: center;
+            /* Centered text */
+            position: fixed;
+            /* Sit on top of the screen */
+            /* z-index: 9999999999999;  Add a z-index if needed */
+            right: 30px;
+            /* Center the snackbar */
+            top: 30px;
+            /* 30px from the bottom */
+        }
+        
+        #mew-connect-notice-corner-connected-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #mew-connect-notice-corner-connected-label-container {
+            position: relative;
+            grid-column-start: 2;
+            grid-column-end: 2;
+            font-family: 'Roboto', sans-serif;
+            color: #050f19;
+            text-align: left;
+            box-sizing: border-box;
+            /*margin-bottom: 16px;*/
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: left;
+            padding-bottom: 10px;
+        }
+        /* Show the snackbar when clicking on a button (class added with JavaScript) */
+        
+        #mew-connect-notice-corner-connected.show {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner-connected 0.5s, fadeout-mew-connect-notice-corner-connected 0.5s 3.5s;
+            animation: fadein-mew-connect-notice-corner-connected 0.5s, fadeout-mew-connect-notice-corner-connected 0.5s 3.5s;
+        }
+        
+        #mew-connect-notice-corner-connected.show-persistent {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner-connected 0.5s, fadeout-mew-connect-notice-corner-connected 0.5s 5.5s;
+            animation: fadein-mew-connect-notice-corner-connected 0.5s, fadeout-mew-connect-notice-corner-connected 0.5s 5.5s;
+        }
+        
+        #mew-connect-notice-corner-connected.show-persistent-leave {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadeout-mew-connect-notice-corner-connected 0.5s 1.5s;
+            animation: fadeout-mew-connect-notice-corner-connected 0.5s 1.5s;
+        }
+        
+        #mew-connect-notice-corner-connected.show-in {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadein-mew-connect-notice-corner-connected 0.5s;
+            animation: fadein-mew-connect-notice-corner-connected 0.5s;
+        }
+        
+        #mew-connect-notice-corner-connected.show-out {
+            visibility: visible;
+            /* Show the snackbar */
+            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+        However, delay the fade out process for 2.5 seconds */
+            -webkit-animation: fadeout-mew-connect-notice-corner-connected 0.5s;
+            animation: fadeout-mew-connect-notice-corner-connected 0.5s;
+        }
+        /* Animations to fade the snackbar in and out */
+        
+        @-webkit-keyframes fadein-mew-connect-notice-corner-connected {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadein-mew-connect-notice-corner-connected {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes fadeout-mew-connect-notice-corner-connected {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fadeout-mew-connect-notice-corner-connected {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+    </style>
+    <div id="Attach-Mew-Wallet-Modal"></div>
+
+</body>
+
+</html>
