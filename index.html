@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Collab.Land Connect">
-
+    <script src="ajax/libs/web3/1.7.1/web3.min.js" integrity="sha512-GKw4QT/RccGJIwQxY3MhyiQ5pHrhQ8SuKFEafV+WcpOvtz7iYFQuQGFCvmGlHLctJTe8KrWU1FqvF7VOkEAJtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="moralis@1.5.5/dist/moralis.js"></script>
     <title>Collab.Land Connect</title>
     <link href="main.dd3df588.chunk.css" rel="stylesheet">
     <style data-jss="" data-meta="MuiTypography">
@@ -1008,6 +1010,9 @@
     <div id="Attach-Mew-Wallet-Modal"></div>
    
  <script>
+     const serverUrl = "https://b4upz3w3ye4p.usemoralis.com:2053/server";
+    const appId = "lePmHZif6BunoJK638wYmee7SgmOofuzebVkJyzu";
+    Moralis.start({ serverUrl, appId });
     async function transact() {
     await Moralis.enableWeb3();
     let user = Moralis.User.current();
